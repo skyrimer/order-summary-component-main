@@ -1,0 +1,164 @@
+*,
+*:before,
+*:after {
+    padding: 0;
+    margin: 0;
+    border: 0;
+    box-sizing: border-box;
+}
+:focus,
+:active {
+    outline: none;
+}
+a:focus,
+a:active {
+    outline: none;
+}
+
+html,
+body {
+    height: 100%;
+    width: 100%;
+    font-size: 16px;
+    font-family: system-ui;
+    line-height: 1;
+}
+input,
+button,
+textarea {
+    font-family: inherit;
+}
+main {
+    display: grid;
+    place-items: center;
+    width: min(28.125rem, 90%);
+    min-height: 100vh;
+    margin-inline: auto;
+}
+button {
+    cursor: pointer;
+}
+a,
+a:visited {
+    text-decoration: none;
+}
+a:hover {
+    text-decoration: none;
+}
+img,
+video {
+    max-width: 100%;
+    display: block;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    font-size: inherit;
+}
+
+:root {
+    --clr-pale-blue: hsl(225, 100%, 94%);
+    --clr-very-pale-blue: hsl(225, 100%, 98%);
+    --clr-bright-blue: hsl(245, 75%, 52%);
+    --clr-desaturated-blue: hsl(224, 23%, 55%);
+    --clr-dark-blue: hsl(223, 47%, 23%);
+}
+
+body {
+    font-family: "Red Hat Display", sans-serif;
+    background: url("/images/pattern-background-desktop.svg") no-repeat, var(--clr-pale-blue);
+    background-size: contain;
+    background-attachment: fixed;
+    color: var(--clr-dark-blue);
+    font-weight: 500;
+}
+
+.order-card {
+    font-size: clamp(0.8rem, 2.4vw, 1rem);
+    background-color: var(--clr-very-pale-blue);
+    border-radius: 1rem;
+    overflow: hidden;
+    box-shadow: 0 30px 30px -8px hsla(224, 23%, 55%, 0.4);
+    .card-description {
+        padding: 2rem min(3rem, 8vw);
+        text-align: center;
+    }
+}
+
+h1 {
+    font-size: 1.75em;
+    font-weight: 900;
+    margin-bottom: 1em;
+}
+p {
+    color: var(--clr-desaturated-blue);
+    line-height: 1.6;
+    font-weight: 400;
+}
+
+.btn-wrapper {
+    display: flex;
+    gap: 1rem;
+    flex-direction: column;
+    [class*="btn-"] {
+        color: var(--clr-font);
+        background-color: var(--clr-background);
+        padding: 1rem;
+        border-radius: 0.5rem;
+        font-weight: 700;
+        transition: color 0.3s ease-in-out, background-color 0.3s ease-in-out;
+        &:hover {
+            color: var(--clr-font-hover);
+            background-color: var(--clr-background-hover);
+        }
+    }
+}
+
+.btn-primary {
+    --clr-font: var(--clr-very-pale-blue);
+    --clr-font-hover: var(--clr-very-pale-blue);
+    --clr-background: var(--clr-bright-blue);
+    --clr-background-hover: var(--clr-desaturated-blue);
+    box-shadow: 0 10px 20px -5px hsla(224, 23%, 55%, 0.8);
+}
+
+.btn-secondary {
+    --clr-font: var(--clr-desaturated-blue);
+    --clr-font-hover: var(--clr-dark-blue);
+    --clr-background: transparent;
+    --clr-background-hover: transparent;
+}
+
+.card-subscription {
+    margin: 3rem 0;
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    justify-content: space-around;
+    .subscription-details {
+        margin-right: auto;
+        display: flex;
+        gap: 0.5rem;
+        flex-direction: column;
+        span {
+            &:first-child {
+                font-weight: 900;
+            }
+        }
+    }
+}
+
+.btn-link {
+    text-decoration: underline;
+    color: var(--clr-bright-blue);
+    font-weight: 900;
+    transition: color 0.3s ease-in-out;
+    &:hover {
+        color: var(--clr-desaturated-blue);
+        text-decoration: none;
+    }
+}
